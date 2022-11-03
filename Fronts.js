@@ -44,12 +44,32 @@ class SLL {
             return this.head.value;
         }
     }
+
+    //Display
+
+    //Create display() that uses a while loop and a runner to return a string containing all list values.
+    //Build what you wish console.log(myList) did!
+
+    display() {
+        var listString = "";
+
+        if (this.head == null) {
+            return listString;
+        }
+        listString += this.head.value;
+
+        var runner = this.head.next;
+        while (runner != null) {
+            listString += "," + runner.value;
+            runner = runner.next;
+        }
+        return listString;
+    }
 }
 
 var mySLL = new SLL();
-console.log(mySLL.front());
 mySLL.addFront(10);
-console.log(mySLL.front());
+console.log(mySLL.display());
 mySLL.addFront(5);
 mySLL.addFront(3);
 
