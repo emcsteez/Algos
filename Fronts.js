@@ -69,8 +69,8 @@ class SLL {
 
 var mySLL = new SLL();
 mySLL.addFront(10);
-console.log(mySLL.display());
 mySLL.addFront(5);
+console.log(mySLL.display());
 mySLL.addFront(3);
 
 
